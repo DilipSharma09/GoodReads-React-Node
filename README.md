@@ -8,7 +8,7 @@
 
 # Current Implementation
 1) Search for books by title, author, or ISBN.
-2) Displays upto 20 search results
+2) Displays 20 search results
 3) Displays Book img,title,author,ratings etc.
 
 # Future Implementation
