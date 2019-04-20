@@ -13,3 +13,6 @@
 
 # Future Implementation
 1) User should be able to add ratings
+
+# NUnit Testing (/src/test.js)
+1) Go to GoodReads-React-Node/React/src/ ib local and run npm test
