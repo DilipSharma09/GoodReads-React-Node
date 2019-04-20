@@ -26,7 +26,7 @@ class Main extends Component {
                 .then(
                     (result) => {
                         this.setState({
-                            searchQuery: result.GoodreadsResponse.search.results.work
+                            searchQuery: result
                         });
                     },
                     (error) => {
