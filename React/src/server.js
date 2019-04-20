@@ -16,6 +16,7 @@ app.get('/search', function (req, res) {
         agent: false
     }, (error, response, body) => {
         var result1 = convert.xml2json(body, { compact: true });
+        console.log((JSON.parse(result1).GoodreadsResponse.search.results.work).length);
          return res.send(JSON.parse(result1).GoodreadsResponse.search.results.work);
     });
 
@@ -31,8 +32,8 @@ app.get('/show', function (req, res) {
         requestCert: false,
         agent: false
     }, (error, response, body) => {
-        var result1 = convert.xml2json(body, { compact: true });
-        return res.send(JSON.parse(result1));
+        var result2 = convert.xml2json(body, { compact: true });
+        return res.send(JSON.parse(result2).GoodreadsResponse.book);
     });
 
 });
