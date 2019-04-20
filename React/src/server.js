@@ -16,7 +16,7 @@ app.get('/search', function (req, res) {
         agent: false
     }, (error, response, body) => {
         var result1 = convert.xml2json(body, { compact: true });
-        return res.send(JSON.parse(result1));
+         return res.send(JSON.parse(result1).GoodreadsResponse.search.results.work);
     });
 
 });
