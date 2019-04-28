@@ -22,8 +22,8 @@ class Main extends Component {
             // this.setState({value: ""});
 
             fetch(`http://localhost:8080/search?q=${qData}`,{ 
-  method: 'GET', 
- 
+                crossDomain:true,
+  method: 'GET',
   headers: {'Content-Type': 'application/json'}
 })
                 .then(res => res.json())
