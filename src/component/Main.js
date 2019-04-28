@@ -21,7 +21,11 @@ class Main extends Component {
 
             // this.setState({value: ""});
 
-            fetch(`http://localhost:8080/search?q=${qData}`)
+            fetch(`http://localhost:8080/search?q=${qData}`,{ 
+  method: 'GET', 
+ 
+  headers: {'Content-Type': 'application/json'}
+})
                 .then(res => res.json())
                 .then(
                     (result) => {
