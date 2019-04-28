@@ -4,7 +4,14 @@ const path = require('path');
 const app = express();
 var Request = require("request");
 var convert = require('xml-js');
-app.use(express.static(path.join(__dirname, 'build')));
+//app.use(express.static(path.join(__dirname, 'build')));
+
+//res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    next();
+  });
 
 app.get('/search', function (req, res) {
 
