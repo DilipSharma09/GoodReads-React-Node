@@ -1,5 +1,7 @@
 #GoodReads using React and Node
 
+Deployed Live at https://goodreadsnodereact.herokuapp.com/
+
 #How to run Locally
 1.	Clone the repo : https://github.com/DilipSharma09/GoodReads-React-Node.git
 2.	npm install to get dependencies
@@ -16,3 +18,4 @@
 
 #NUnit Testing (/src/test.js)
 1.	Go to GoodReads-React-Node/React/src/ ib local and run npm test
+
