@@ -21,7 +21,7 @@ class Main extends Component {
 
             // this.setState({value: ""});
 
-            fetch(`http://localhost:8080/search?q=${qData}`,{ mode: 'no-cors' })
+            fetch(`http://localhost:8080/search?q=${qData}`)
                 .then(res => res.json())
                 .then(
                     (result) => {
