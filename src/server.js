@@ -7,7 +7,7 @@ var convert = require('xml-js');
 var cors = require('cors');
 
 // use it before all route definitions
-app.use(cors({origin: 'http://localhost:3000'}));
+//app.use(cors({origin: 'http://localhost:3000'}));
 
 
 //app.use(express.static(path.join(__dirname, 'build')));
@@ -19,7 +19,13 @@ app.use(cors({origin: 'http://localhost:3000'}));
     //next();
   //});
 
-app.get('/search', function (req, res) {
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/search', function (req, res,next) {
 
     //console.log("q value" +  JSON.stringify( req.query.q) );
     Request.get({
