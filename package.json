@@ -18,7 +18,7 @@
   },
   "scripts": {
    "client-install": "npm install",
-    "start": "node index.js",
+    "start": "node src/server.js",
     "server": "nodemon index.js",
     "client": "npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
